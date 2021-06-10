@@ -7,6 +7,8 @@ import LogoClubs from "./logo-clubs.png";
 import Logo from "./hool-logo.png";
 import LogoBg from "./logo-bg.png";
 import MenuBurger from "./menu-burger.png";
+import LogoFeature from "./logo-feature.png";
+import LogoFtBg from "./logo-ft-bg.png";
 
 export {
     Separation,
@@ -17,5 +19,7 @@ export {
     LogoClubs,
     Logo,
     LogoBg,
-    MenuBurger
+    MenuBurger,
+    LogoFeature,
+    LogoFtBg
 };
