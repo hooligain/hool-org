@@ -1,0 +1,55 @@
+/* ********* COLOR ********* */
+$colorWhite: #ffffff;
+$colorYellow: #fec602;
+$colorDarkBlue: #001e31;
+
+/* ********* SPACING ********* */
+$spacer: 1rem !default;    
+$spacers: (
+    0: 0,
+    1: ($spacer * 1),         // 16px
+    2: ($spacer * 1.5),       // 24px
+    3: ($spacer * 2),         // 32px
+    4: ($spacer * 2.5),       // 40px
+    5: ($spacer * 3),         // 48px
+    6: ($spacer * 3.5)        // 56px
+);
+
+$spaceamounts: (0, 1, 2, 3, 4, 5, 6); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+$axe: (x,y);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: map-get($spacers, $space) !important;
+    }
+  
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: map-get($spacers, $space) !important;
+    }
+  }
+
+  .mx-#{$space} {
+    margin-left: map-get($spacers, $space) !important;
+    margin-right: map-get($spacers, $space) !important;
+  }
+  .my-#{$space} {
+    margin-top: map-get($spacers, $space) !important;
+    margin-bottom: map-get($spacers, $space) !important;
+  }
+  .m-#{$space} {
+    margin: map-get($spacers, $space) !important;
+  }
+  .px-#{$space} {
+    padding-left: map-get($spacers, $space) !important;
+    padding-right: map-get($spacers, $space) !important;
+  }
+  .py-#{$space} {
+    padding-top: map-get($spacers, $space) !important;
+    padding-bottom: map-get($spacers, $space) !important;
+  }
+  .p-#{$space} {
+    padding: map-get($spacers, $space) !important;
+  }
+}
