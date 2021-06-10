@@ -9,6 +9,10 @@ import LogoBg from "./logo-bg.png";
 import MenuBurger from "./menu-burger.png";
 import LogoFeature from "./logo-feature.png";
 import LogoFtBg from "./logo-ft-bg.png";
+import Ecosystem from "./ecosystem.png";
+import EcosystemMobile from "./ecosystem-mobile.png";
+import EcosystemBg from "./ecosystem-bg.png";
+import EcosystemBgMb from "./ecosystem-bg-mb.png";
 
 export {
     Separation,
@@ -21,5 +25,9 @@ export {
     LogoBg,
     MenuBurger,
     LogoFeature,
-    LogoFtBg
+    LogoFtBg,
+    Ecosystem,
+    EcosystemMobile,
+    EcosystemBg,
+    EcosystemBgMb
 };
