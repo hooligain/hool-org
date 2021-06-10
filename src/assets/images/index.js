@@ -6,6 +6,8 @@ import Solution3 from "./solution-3.png";
 import LogoClubs from "./logo-clubs.png";
 import Logo from "./hool-logo.png";
 import LogoBg from "./logo-bg.png";
+import LogoFeature from "./logo-feature.png";
+import LogoFtBg from "./logo-ft-bg.png";
 
 export {
     Separation,
@@ -16,4 +18,6 @@ export {
     LogoClubs,
     Logo,
     LogoBg,
+    LogoFeature,
+    LogoFtBg
 };
