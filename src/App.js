@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.scss";
 
 import * as Images from "./assets/images/index";
 
@@ -16,7 +14,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<div id='header'>
-				<div className="menu">
+				<div className="menu d-none d-md-flex">
 					<div className="menu-left">
 						<a href="/" className='header-button active'>HOME</a>
 						<a href="/" className='header-button'>WHITEPAPER</a>
@@ -33,6 +31,19 @@ const App = () => {
 				</div>
 				<div className="introduction">
 					<div className="introduction-img">
+						<div className="menu-mobile d-flex d-md-none">
+							<div className="menu-left d-flex">
+								<img src={Images.Logo} alt='logo' className="logo-image" />
+								<a href="/" className='header-button active'>HOME</a>
+								<a href="/" className='header-button'>WHITEPAPER</a>
+								<a href="/" className='header-button'>TEAM</a>
+							</div>
+							<div className="menu-burger">
+								<button>
+									<img src={Images.MenuBurger} className="burger-image"/>
+								</button>
+							</div>
+						</div>
 						<img loading='lazy' src={Images.LogoClubs} />
 					</div>
 					<div className="introduction-content">
