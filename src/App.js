@@ -6,10 +6,11 @@ import * as Images from "./assets/images/index";
 
 const App = () => {
 
-	const rendreImage = (imageDesktop, imageMobile, alt) => (
+	const rendreImage = (imageDesktop, imageMobile, alt, className) => (
 		<picture>
 			<source media="(min-width: 768px)" srcset={imageDesktop} />
-			<img src={imageMobile} alt={alt} />
+			{className && <img className={className} src={imageMobile} alt={alt} />}
+			{!className && <img src={imageMobile} alt={alt} />}
 		</picture>
 	);
 
@@ -44,7 +45,7 @@ const App = () => {
 				</div>
 			</div>
 			<div class="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation")}
+				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 			<div class="" id="solution">
 				<h1 class="title">Our Solution</h1>
@@ -74,7 +75,7 @@ const App = () => {
 			</div>
 
 			<div class="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation")}
+				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 
 			<div className="" id="features">
@@ -110,8 +111,13 @@ const App = () => {
 				</div>
 				<img src={Images.LogoFtBg} alt='logo' className="logo-ft-bg" />
 			</div>
-			<div class="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation")}
+			<div className="separation">
+				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+			</div>
+
+			<div className="" id="ecosystem">
+				<h1>Hool Ecosystem</h1>
+				{rendreImage(Images.Ecosystem, Images.EcosystemMobile, "separation", "ecosystem-img")}
 			</div>
 		</div>
 	);

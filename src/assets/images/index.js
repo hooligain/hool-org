@@ -8,6 +8,10 @@ import Logo from "./hool-logo.png";
 import LogoBg from "./logo-bg.png";
 import LogoFeature from "./logo-feature.png";
 import LogoFtBg from "./logo-ft-bg.png";
+import Ecosystem from "./ecosystem.png";
+import EcosystemMobile from "./ecosystem-mobile.png";
+import EcosystemBg from "./ecosystem-bg.png";
+import EcosystemBgMb from "./ecosystem-bg-mb.png";
 
 export {
     Separation,
@@ -19,5 +23,9 @@ export {
     Logo,
     LogoBg,
     LogoFeature,
-    LogoFtBg
+    LogoFtBg,
+    Ecosystem,
+    EcosystemMobile,
+    EcosystemBg,
+    EcosystemBgMb
 };
