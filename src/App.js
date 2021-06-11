@@ -1,12 +1,18 @@
 import React from "react";
 
 import * as Images from "./assets/images/index";
+const LinkToContactUs = 'https://forms.gle/MapxURFLxcmzv7J28';
+const LinkGithub = 'https://github.com/hooligain';
 
 const App = () => {
+	const openInNewTab = (url) => {
+		const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+		if (newWindow) newWindow.opener = null
+	}
 
 	const rendreImage = (imageDesktop, imageMobile, alt, className) => (
 		<picture>
-			<source media="(min-width: 768px)" srcset={imageDesktop} />
+			<source media="(min-width: 768px)" srcSet={imageDesktop} />
 			{className && <img className={className} src={imageMobile} alt={alt} />}
 			{!className && <img src={imageMobile} alt={alt} />}
 		</picture>
@@ -27,7 +33,7 @@ const App = () => {
 					</div>
 					<div className="menu-right">
 						<a href="/" className='header-button'>Testnest</a>
-						<a href="/" className='header-button'>Contact us</a>
+						<a href={LinkToContactUs} rel="noreferrer" target="_blank" className='header-button'>Contact us</a>
 					</div>
 				</div>
 				<div className="introduction">
@@ -41,57 +47,57 @@ const App = () => {
 							</div>
 							<div className="menu-burger">
 								<button>
-									<img src={Images.MenuBurger} className="burger-image"/>
+									<img src={Images.MenuBurger} alt='burger' className="burger-image" />
 								</button>
 							</div>
 						</div>
-						<img loading='lazy' src={Images.LogoClubs} />
+						<img loading='lazy' alt='clubs' src={Images.LogoClubs} />
 					</div>
 					<div className="introduction-content">
-						<h1 class="">Hool</h1>
+						<h1 className="">Hool</h1>
 						<p className="slogan text-yellow">The first loyalty football gaming platform</p>
 						<p className="description">Hool’s mission is to give fans the power to approach their football clubs, bring fans and clubs closer together</p>
-						<button className="contact-us">Contact us</button>
+						<button onClick={() => {openInNewTab(LinkToContactUs)}} className="contact-us">Contact us</button>
 					</div>
 				</div>
 			</div>
-			<div class="separation">
+			<div className="separation">
 				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
-			<div class="" id="solution">
-				<h1 class="title">Our Solution</h1>
-				<div class="solution-content">
-					<div class="single-solution">
-						<img loading="lazy" src={Images.Solution1} />
+			<div className="" id="solution">
+				<h1 className="title">Our Solution</h1>
+				<div className="solution-content">
+					<div className="single-solution">
+						<img loading="lazy" alt='solution' src={Images.Solution1} />
 						<p>
 							An NFT eco-system built by fans that incentivizes football clubs
 							and players to endorse their supporter.
-					</p>
+						</p>
 					</div>
-					<div class="single-solution">
-						<img loading="lazy" src={Images.Solution2} />
+					<div className="single-solution">
+						<img loading="lazy" alt='solution' src={Images.Solution2} />
 						<p>
 							Decentralized oracle and incentive that builds a bidirectional
 							interaction between the eco-system and real life.
-					</p>
+						</p>
 					</div>
-					<div class="single-solution">
-						<img loading="lazy" src={Images.Solution3} />
+					<div className="single-solution">
+						<img loading="lazy" alt='solution' src={Images.Solution3} />
 						<p>
 							A loyalty farming protocol that promotes the long lasting
 							contribution of users inside a pool.
-					</p>
+						</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="separation">
+			<div className="separation">
 				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 
 			<div className="" id="features">
 				<h1>Features Overview</h1>
-				<div class="ft-section">
+				<div className="ft-section">
 					<img src={Images.LogoFeature} alt='logofeature' className="logo-ft-img" />
 					<ul className="ft-content">
 						<li className="ft-unique">
@@ -128,7 +134,7 @@ const App = () => {
 
 			<div className="" id="ecosystem">
 				<h1>Hool Ecosystem</h1>
-				{rendreImage(Images.Ecosystem, Images.EcosystemMobile, "separation", "ecosystem-img")}
+				{rendreImage(Images.Ecosystem, Images.EcosystemMobile, "ecosystem", "ecosystem-img")}
 			</div>
 
 			<div className="separation-eco">
@@ -137,7 +143,56 @@ const App = () => {
 
 			<div className="" id="milestones">
 				<h1 className="title">Milestones</h1>
-				{rendreImage(Images.Milestones, Images.MilestonesMb, "separation", "milestones-img")}
+				{rendreImage(Images.Milestones, Images.MilestonesMb, "Milestones", "milestones-img")}
+			</div>
+
+			<div className="separation">
+				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+			</div>
+
+			<div className="" id="teams">
+				<h1 className="title">Teams</h1>
+				<div className="teams-content">
+					<div className="person">
+						{rendreImage(Images.Person1, Images.Person1Mb, "separation", "person-img")}
+
+						<p className="person-name">Andrew Nguyen</p>
+						<div className="person-description">
+							<p> Founding engineer at kyber.network.</p>
+							<p>Head researcher at mercurial.finance</p>
+							<p>Author of the DMM protocol</p>
+						</div>
+					</div>
+					<div className="person">
+						{rendreImage(Images.Person2, Images.Person2Mb, "separation", "person-img")}
+						<p className="person-name">Trong Nguyen</p>
+						<div className="person-description">
+							<p>Head of Research at Kyber Network</p>
+							<p>Ph.D. in Applied Mathematics  and Machine Learning.</p>
+							<p>Master degree in Information Security</p>
+						</div>
+					</div>
+					<div className="person">
+						{rendreImage(Images.Person3, Images.Person3Mb, "separation", "person-img")}
+						<p className="person-name">Bao Mai</p>
+						<div className="person-description">
+							<p>M.S in Computer Science</p>
+							<p>Senior developer at Atos France</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="footer">
+				<div className="footer-left">
+					<img src={Images.Logo} alt='logo' className="logo-image" />
+					<a href="/" className='footer-button'>HOME</a>
+					<a href={LinkToContactUs} rel="noreferrer" target="_blank" className='footer-button'>CONTACT</a>
+				</div>
+				<div className="footer-right">
+					<img loading='lazy' src={Images.TelegramLogo} alt='Telegram' />
+					<img loading='lazy' onClick={()=>openInNewTab(LinkGithub)} src={Images.GithubLogo} alt='Github' />
+				</div>
 			</div>
 		</div>
 	);
