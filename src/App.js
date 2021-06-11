@@ -119,6 +119,15 @@ const App = () => {
 				<h1>Hool Ecosystem</h1>
 				{rendreImage(Images.Ecosystem, Images.EcosystemMobile, "separation", "ecosystem-img")}
 			</div>
+
+			<div className="separation-eco">
+				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+			</div>
+
+			<div className="" id="milestones">
+				<h1 className="title">Hool Ecosystem</h1>
+				{rendreImage(Images.Milestones, Images.MilestonesMb, "separation", "milestones-img")}
+			</div>
 		</div>
 	);
 };
