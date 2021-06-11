@@ -6,6 +6,15 @@ import Solution3 from "./solution-3.png";
 import LogoClubs from "./logo-clubs.png";
 import Logo from "./hool-logo.png";
 import LogoBg from "./logo-bg.png";
+import MenuBurger from "./menu-burger.png";
+import LogoFeature from "./logo-feature.png";
+import LogoFtBg from "./logo-ft-bg.png";
+import Ecosystem from "./ecosystem.png";
+import EcosystemMobile from "./ecosystem-mobile.png";
+import EcosystemBg from "./ecosystem-bg.png";
+import EcosystemBgMb from "./ecosystem-bg-mb.png";
+import Milestones from "./milestones.png";
+import MilestonesMb from "./milestones-mb.png";
 
 export {
     Separation,
@@ -16,4 +25,13 @@ export {
     LogoClubs,
     Logo,
     LogoBg,
+    MenuBurger,
+    LogoFeature,
+    LogoFtBg,
+    Ecosystem,
+    EcosystemMobile,
+    EcosystemBg,
+    EcosystemBgMb,
+    Milestones,
+    MilestonesMb
 };
