@@ -10,7 +10,7 @@ const App = () => {
 		if (newWindow) newWindow.opener = null
 	}
 
-	const rendreImage = (imageDesktop, imageMobile, alt, className) => (
+	const renderImage = (imageDesktop, imageMobile, alt, className) => (
 		<picture>
 			<source media="(min-width: 768px)" srcSet={imageDesktop} />
 			{className && <img className={className} src={imageMobile} alt={alt} />}
@@ -62,7 +62,7 @@ const App = () => {
 				</div>
 			</div>
 			<div className="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+				{renderImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 			<div className="" id="solution">
 				<h1 className="title">Our Solution</h1>
@@ -92,7 +92,7 @@ const App = () => {
 			</div>
 
 			<div className="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+				{renderImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 
 			<div className="" id="features">
@@ -129,32 +129,32 @@ const App = () => {
 				<img src={Images.LogoFtBg} alt='logo' className="logo-ft-bg" />
 			</div>
 			<div className="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+				{renderImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 
 			<div className="" id="ecosystem">
 				<h1>Hool Ecosystem</h1>
-				{rendreImage(Images.Ecosystem, Images.EcosystemMobile, "ecosystem", "ecosystem-img")}
+				{renderImage(Images.Ecosystem, Images.EcosystemMobile, "ecosystem", "ecosystem-img")}
 			</div>
 
 			<div className="separation-eco">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+				{renderImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 
 			<div className="" id="milestones">
 				<h1 className="title">Milestones</h1>
-				{rendreImage(Images.Milestones, Images.MilestonesMb, "Milestones", "milestones-img")}
+				{renderImage(Images.Milestones, Images.MilestonesMb, "Milestones", "milestones-img")}
 			</div>
 
 			<div className="separation">
-				{rendreImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
+				{renderImage(Images.Separation, Images.SeparationMobile, "separation", "separation-img")}
 			</div>
 
 			<div className="" id="teams">
 				<h1 className="title">Teams</h1>
 				<div className="teams-content">
 					<div className="person">
-						{rendreImage(Images.Person1, Images.Person1Mb, "separation", "person-img")}
+						{renderImage(Images.Person1, Images.Person1Mb, "team", "person-img")}
 
 						<p className="person-name">Andrew Nguyen</p>
 						<div className="person-description">
@@ -164,7 +164,7 @@ const App = () => {
 						</div>
 					</div>
 					<div className="person">
-						{rendreImage(Images.Person2, Images.Person2Mb, "separation", "person-img")}
+						{renderImage(Images.Person2, Images.Person2Mb, "team", "person-img")}
 						<p className="person-name">Trong Nguyen</p>
 						<div className="person-description">
 							<p>Head of Research at Kyber Network</p>
@@ -173,7 +173,7 @@ const App = () => {
 						</div>
 					</div>
 					<div className="person">
-						{rendreImage(Images.Person3, Images.Person3Mb, "separation", "person-img")}
+						{renderImage(Images.Person3, Images.Person3Mb, "team", "person-img")}
 						<p className="person-name">Bao Mai</p>
 						<div className="person-description">
 							<p>M.S in Computer Science</p>
