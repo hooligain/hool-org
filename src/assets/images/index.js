@@ -13,6 +13,8 @@ import Ecosystem from "./ecosystem.png";
 import EcosystemMobile from "./ecosystem-mobile.png";
 import EcosystemBg from "./ecosystem-bg.png";
 import EcosystemBgMb from "./ecosystem-bg-mb.png";
+import Milestones from "./milestones.png";
+import MilestonesMb from "./milestones-mb.png";
 
 export {
     Separation,
@@ -29,5 +31,7 @@ export {
     Ecosystem,
     EcosystemMobile,
     EcosystemBg,
-    EcosystemBgMb
+    EcosystemBgMb,
+    Milestones,
+    MilestonesMb
 };
