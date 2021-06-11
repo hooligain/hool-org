@@ -136,7 +136,7 @@ const App = () => {
 			</div>
 
 			<div className="" id="milestones">
-				<h1 className="title">Hool Ecosystem</h1>
+				<h1 className="title">Milestones</h1>
 				{rendreImage(Images.Milestones, Images.MilestonesMb, "separation", "milestones-img")}
 			</div>
 		</div>
