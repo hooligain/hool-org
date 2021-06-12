@@ -1,10 +1,11 @@
 import React from "react";
 import * as Images from "../assets/images/index";
 import Header from './header'
+
 const LinkToContactUs = 'https://forms.gle/MapxURFLxcmzv7J28';
 const LinkGithub = 'https://github.com/hooligain';
 
-const HomePage = ({onSwitchPage}) => {
+const HomePage = () => {
 	const openInNewTab = (url) => {
 		const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
 		if (newWindow) newWindow.opener = null
@@ -17,6 +18,7 @@ const HomePage = ({onSwitchPage}) => {
 			{!className && <img src={imageMobile} alt={alt} />}
 		</picture>
 	);
+
 	return (
 		<div className="App">
 			<div id='header'>
@@ -37,7 +39,7 @@ const HomePage = ({onSwitchPage}) => {
 				</div>
 				<div className="introduction">
 					<div className="introduction-img">
-                        <Header onSwitchPage={onSwitchPage}/>
+                        <Header/>
 						{/* <div className="menu-mobile d-flex d-md-none">
 							<div className="menu-left d-flex">
 								<img src={Images.Logo} alt='logo' className="logo-image" />

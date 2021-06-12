@@ -1,11 +1,9 @@
 import React from "react";
 import * as Images from "../assets/images/index";
-//pros: {isMobile: Boolean}
-export default function Header({onSwitchPage}) {
-  const onPageChange= (e, page) => {
-    e.preventDefault();
-    onSwitchPage(page)
-  }
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+
+export default function Header() {
   return (
     <div className="menu-mobile d-flex d-md-none">
       <div className="menu-left d-flex">
@@ -15,15 +13,24 @@ export default function Header({onSwitchPage}) {
           alt="logo"
           className="logo-image"
         />
-        <a href="/" className="header-button active">
+        <Link to="/" className="header-button active">
           HOME
-        </a>
-        <a href="/" onClick={(e)=>{onPageChange(e, 'WHITEPAPER')}} className="header-button">
+        </Link>
+        {/* <a href="/" className="header-button active">
+          HOME
+        </a> */}
+        <Link to="/whitepaper" className="header-button">
           WHITEPAPER
-        </a>
-        <a href="/#teams" className="header-button">
+        </Link>
+        {/* <a href="/" className="header-button">
+          WHITEPAPER
+        </a> */}
+        <HashLink className="header-button" smooth to="/#teams">
           TEAM
-        </a>
+        </HashLink>
+        {/* <a href="/#teams" className="header-button">
+          TEAM
+        </a> */}
       </div>
       <div className="menu-burger">
         <button>

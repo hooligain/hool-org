@@ -1,20 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import Homepage from './components/HomePage';
 import ComingSoon from "./components/comingSoon";
+import {
+	Switch,
+	Route,
+	BrowserRouter as Router,
+	HashRouter
+} from "react-router-dom";
 
 const App = () => {
-	const Pages = {
-		Homepage: 'HomePage',
-		Whitepaper: 'Whitepaper',
-		TestNest: 'TestNext'
-	}
-	
-	const [page, setPage] = useState('HomePage');
-	
 	return (
 		<>
-			{(page.toLowerCase() === Pages.Homepage.toLowerCase()) && <Homepage page={page} onSwitchPage={(page)=> setPage(page)}/>}
-			{(page.toLowerCase() === Pages.Whitepaper.toLowerCase()) && <ComingSoon page={page} onSwitchPage={(page)=> setPage(page)}/>}
+			<Router>
+				< Switch >
+					<Route path="/whitepaper">
+						<ComingSoon />
+					</Route>
+					<Route path="/">
+						<Homepage />
+					</Route>
+					<HashRouter> <Route path="/" component={Homepage} /></HashRouter>
+					{/* <Route path="/#teams">
+						<Homepage />
+					</Route> */}
+				</Switch >
+			</Router>
+			{/* {(page.toLowerCase() === Pages.Homepage.toLowerCase()) && <Homepage page={page} onSwitchPage={(page) => setPage(page)} />}
+		{(page.toLowerCase() === Pages.Whitepaper.toLowerCase()) && <ComingSoon page={page} onSwitchPage={(page) => setPage(page)} />} */}
 		</>
 	)
 }

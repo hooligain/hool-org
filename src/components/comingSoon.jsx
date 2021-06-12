@@ -1,13 +1,18 @@
-import React from 'react'
-import Header from './header';
-export default function ComingSoon({onSwitchPage}) {
-    return (
-        <div className="ComingSoon">
-            <Header onSwitchPage={onSwitchPage}/>
-            <div className="ComingSoon-content">
-                <p>Coming soon</p>
-                <button onClick={() => onSwitchPage('HomePage')}>Back to Home</button>
-            </div>
-        </div>
-    )
+import React from "react";
+import Header from "./header";
+import { Link } from "react-router-dom";
+export default function ComingSoon() {
+  return (
+    <div className="ComingSoon">
+      <Header />
+      <div className="ComingSoon-content">
+        <p>Coming soon</p>
+        <Link to="/">
+          <button>
+            Back to Home
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
 }
