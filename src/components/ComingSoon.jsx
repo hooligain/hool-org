@@ -7,7 +7,7 @@ import Header from './Header';
 
 export default function ComingSoon() {
 	return (
-		<div className='comingSoon'>
+		<div className='comingSoon header'>
 			<Header />
 			<div className='comingSoon-content'>
 				<p>Coming soon</p>
