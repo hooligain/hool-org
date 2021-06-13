@@ -1,7 +1,7 @@
 /** React */
 import React from 'react';
 import * as Images from '../assets/images/index';
-import {LINK_CONTACT_US, LINK_GITHUB} from '../helpers/constants';
+import {LINK_CONTACT_US, LINK_GITHUB, LINK_TELEGRAM} from '../helpers/constants';
 
 /** App */
 import Header from './Header';
@@ -184,7 +184,7 @@ const HomePage = () => {
 					</a>
 				</div>
 				<div className='footer-right'>
-					<img loading='lazy' src={Images.TelegramLogo} alt='Telegram' />
+					<img loading='lazy' onClick={() => openInNewTab(LINK_TELEGRAM)} src={Images.TelegramLogo} alt='Telegram' />
 					<img loading='lazy' onClick={() => openInNewTab(LINK_GITHUB)} src={Images.GithubLogo} alt='Github' />
 				</div>
 			</div>
