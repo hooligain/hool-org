@@ -22,7 +22,7 @@ const HomePage = () => {
 
 	return (
 		<div className='App'>
-			<div id='header'>
+			<div id='header' className="header">
 				<Header />
 				<div className='introduction'>
 					<div className='introduction-img'>

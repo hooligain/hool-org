@@ -36,9 +36,9 @@ export default function Header() {
 						<Link to='/testnest' className='header-button'>
 							TESTNEST
 						</Link>
-						<Link href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us ml-2'>
+						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us ml-2'>
 							Contact us
-						</Link>
+						</a>
 					</div>
 
 					{/* <li>
