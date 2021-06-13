@@ -1,50 +1,83 @@
-@import "variable";
-@import "mixin";
+@import 'variable';
+@import 'mixin';
 
 @font-face {
-    font-family: "Koho";
-    src: url(../font/KoHo-Regular.ttf);
+	font-family: 'Koho';
+	src: url(../font/KoHo-Regular.ttf);
 }
 
 html,
 body {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 body {
-    background-color: $colorDarkBlue;
-    font-family: "Koho";
-    color: $colorWhite;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+	background-color: $colorDarkBlue;
+	font-family: 'Koho';
+	color: $colorWhite;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-.d-none {display: none}
-.d-flex {display: flex}
+.d-none {
+	display: none;
+}
+.d-flex {
+	display: flex;
+}
 
 @include tablet-desktop() {
-    .d-md-none {display: none}
-    .d-md-flex {display: flex}
+	.d-md-none {
+		display: none;
+	}
+	.d-md-flex {
+		display: flex;
+	}
 }
 
-.position-relative {position: relative}
-.text-white {color: $colorWhite}
-.text-yellow {color: $colorYellow}
+@include desktop() {
+	.d-xl-none {
+		display: none;
+	}
+	.d-xl-flex {
+		display: flex;
+	}
+}
 
-
+.position-relative {
+	position: relative;
+}
+.text-white {
+	color: $colorWhite;
+}
+.text-yellow {
+	color: $colorYellow;
+}
 
 .separation {
-    text-align: center;
-    padding: 30px 0 37px;
-    margin: 0 22.5px;
-    img {
-        width: 95%;
-        @include desktop() {
-            max-width: 992px;
-        }
-    }
-    @include tablet() {
-        margin: 0
-    }
+	text-align: center;
+	padding: 30px 0 37px;
+	margin: 0 22.5px;
+	img {
+		width: 95%;
+		@include desktop() {
+			max-width: 992px;
+		}
+	}
+	@include tablet() {
+		margin: 0;
+	}
+}
+
+p,
+a,
+li {
+	font-size: 14px;
+	@include tablet() {
+		font-size: 16px;
+	}
+	@include desktop() {
+		font-size: 18px;
+	}
 }
