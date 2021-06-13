@@ -23,7 +23,7 @@ body {
 .d-none {display: none}
 .d-flex {display: flex}
 
-@include tablet() {
+@include tablet-desktop() {
     .d-md-none {display: none}
     .d-md-flex {display: flex}
 }

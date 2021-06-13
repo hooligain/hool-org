@@ -36,21 +36,21 @@ const App = () => {
 						<a href={LinkToContactUs} rel="noreferrer" target="_blank" className='header-button'>Contact us</a>
 					</div>
 				</div>
+				<div className="menu-mobile d-flex d-md-none">
+					<div className="menu-left d-flex">
+						<img src={Images.Logo} alt='logo' className="logo-image" />
+						<a href="/" className='header-button active'>HOME</a>
+						<a href="/" className='header-button'>WHITEPAPER</a>
+						<a href="/" className='header-button'>TEAM</a>
+					</div>
+					<div className="menu-burger">
+						<button>
+							<img src={Images.MenuBurger} alt='burger' className="burger-image" />
+						</button>
+					</div>
+				</div>
 				<div className="introduction">
 					<div className="introduction-img">
-						<div className="menu-mobile d-flex d-md-none">
-							<div className="menu-left d-flex">
-								<img src={Images.Logo} alt='logo' className="logo-image" />
-								<a href="/" className='header-button active'>HOME</a>
-								<a href="/" className='header-button'>WHITEPAPER</a>
-								<a href="/" className='header-button'>TEAM</a>
-							</div>
-							<div className="menu-burger">
-								<button>
-									<img src={Images.MenuBurger} alt='burger' className="burger-image" />
-								</button>
-							</div>
-						</div>
 						<img loading='lazy' alt='clubs' src={Images.LogoClubs} />
 					</div>
 					<div className="introduction-content">
@@ -158,7 +158,7 @@ const App = () => {
 
 						<p className="person-name">Andrew Nguyen</p>
 						<div className="person-description">
-							<p> Founding engineer at kyber.network.</p>
+							<p>Founding engineer at kyber.network.</p>
 							<p>Head researcher at mercurial.finance</p>
 							<p>Author of the DMM protocol</p>
 						</div>
