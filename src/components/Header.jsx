@@ -1,6 +1,6 @@
 /** React */
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
 
 /** App */
@@ -9,8 +9,16 @@ import {LINK_CONTACT_US} from '../helpers/constants';
 
 export default function Header() {
 	const [isMenuBurgerVisible, setIsMenuBurgerVisible] = React.useState(false);
+	const location = useLocation();
 
 	const classNameMenuBurger = isMenuBurgerVisible ? 'menu-burger open' : 'menu-burger';
+	const getActiveClassName = (to, otherClasses = '') => {
+		let className = 'header-button ' + otherClasses;
+		if (location.pathname === to) {
+			className += ' active'; 
+		}
+		return className;
+	}
 	return (
 		<>
 			<div className='menu d-none d-xl-flex'>
@@ -19,10 +27,10 @@ export default function Header() {
 				</div>
 				<div className='menu-content'>
 					<div className='menu-left'>
-						<Link to='/' className='header-button active'>
+						<Link to='/' className={getActiveClassName('/')}>
 							HOME
 						</Link>
-						<Link to='/whitepaper' className='header-button mx-2'>
+						<Link to='/whitepaper' className={getActiveClassName('/whitepaper', 'mx-2')}>
 							WHITEPAPER
 						</Link>
 						<HashLink className='header-button' smooth to='/#teams'>
@@ -33,7 +41,7 @@ export default function Header() {
 						<img src={Images.Logo} alt='logo' className='logo-image' />
 					</div>
 					<div className='menu-right'>
-						<Link to='/testnest' className='header-button'>
+						<Link to='/testnest' className={getActiveClassName('/testnest')}>
 							TESTNEST
 						</Link>
 						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us ml-2'>
