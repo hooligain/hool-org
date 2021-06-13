@@ -1,7 +1,7 @@
 @import "variable";
 @import "mixin";
 
-.ComingSoon{
+.comingSoon{
     width:100%;
     height: 100vh;
     background-image: url("../images/comingsoonbg.png");
@@ -10,7 +10,7 @@
     text-align: center;
     position: absolute;
     margin: 0 0;
-    .ComingSoon-content{
+    .comingSoon-content{
         position: absolute;
         width: 100%;
         height: 90vh;

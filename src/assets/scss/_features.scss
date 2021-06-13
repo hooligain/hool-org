@@ -1,14 +1,16 @@
 @import "mixin";
+@import "variable";
 
 #features {
     width: 100%;
     h1 {
         margin: 0 20px 50px;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
         text-align: center;
         @include desktop() {
             margin: 20px 20px 0px;
+            font-size: 32px;
         }
     }
     .ft-section {
@@ -26,38 +28,31 @@
             .ft-unique {
                 display: flex;
                 flex-direction: row;
-                font-size: 16px;
                 margin-bottom: 16px;
                 .ft-order {
                     max-width: 24px;
                     max-height: 24px;
                     height: 100%;
                     padding: 1px 0 2px 0;
-                    background-color: #ffffff;
+                    background-color: $colorWhite;
                     border-radius: 50%;
-                    color: #001e31;
+                    color: $colorDarkBlue;
                     text-align: center;
                     font-size: 16px;
                     font-family: KoHo;
                     font-weight: 600;
                     width: 100%;
-                    @include tablet-desktop() {
-                        font-size: 18px;
-                    }
                 }
                 .ft-unique-content {
                     line-height: 1.5;
                     margin: 0 23px 0 17px;
                     .ft-ct-active {
                         font-weight: 600;
-                        color: #fec602;
+                        color: $colorYellow;
                     }
                     @include tablet-desktop() {
                         margin: 0 29px 0 17px;
                     }
-                }
-                @include tablet-desktop() {
-                    font-size: 18px;
                 }
             }
             @include tablet-desktop() {
