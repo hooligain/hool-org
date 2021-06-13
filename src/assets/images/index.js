@@ -5,7 +5,7 @@ import Solution2 from "./solution-2.png";
 import Solution3 from "./solution-3.png";
 import LogoClubs from "./logo-clubs.png";
 import Logo from "./hool-logo.png";
-import LogoBg from "./logo-bg.png";
+import LogoBg from "./logo2-bg.png";
 import MenuBurger from "./menu-burger.png";
 import LogoFeature from "./logo-feature.png";
 import LogoFtBg from "./logo-ft-bg.png";
@@ -23,6 +23,7 @@ import Person2Mb from "./person2-mb.png";
 import Person3Mb from "./person3-mb.png";
 import GithubLogo from "./github.png";
 import TelegramLogo from "./telegram.png";
+import Mouse from './mouse.png';
 
 export {
     Separation,
@@ -49,5 +50,6 @@ export {
     Person2Mb,
     Person3Mb,
     GithubLogo,
-    TelegramLogo
+    TelegramLogo,
+    Mouse
 };
