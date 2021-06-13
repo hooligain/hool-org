@@ -4,7 +4,7 @@ import {Switch, Route, BrowserRouter as Router, HashRouter} from 'react-router-d
 
 /** App */
 import Homepage from './components/HomePage';
-import ComingSoon from './components/comingSoon';
+import ComingSoon from './components/ComingSoon';
 
 const App = () => {
 	return (
@@ -20,7 +20,6 @@ const App = () => {
 					<Homepage />
 				</Route>
 				<HashRouter>
-					{' '}
 					<Route path='/' component={Homepage} />
 				</HashRouter>
 			</Switch>
