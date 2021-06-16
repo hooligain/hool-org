@@ -200,7 +200,7 @@ const HomePage = () => {
       </div>
 
       <div id="teams">
-        <h1 className="title">The Teams</h1>
+        <h1 className="title">The Team</h1>
         <div className="teams-content">
           {TeamMembers.map((member) => (
             <div className="person">
