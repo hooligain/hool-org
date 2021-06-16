@@ -24,6 +24,10 @@ import Person3Mb from "./person3-mb.png";
 import GithubLogo from "./github.png";
 import TelegramLogo from "./telegram.png";
 import Mouse from './mouse.png';
+import Person4 from "./person4.png";
+import Person5 from "./person5.png";
+import Person4Mb from "./person4-mb.png";
+import Person5Mb from "./person5-mb.png";
 
 export {
     Separation,
@@ -46,9 +50,13 @@ export {
     Person1,
     Person2,
     Person3,
+    Person4,
+    Person5,
     Person1Mb,
     Person2Mb,
     Person3Mb,
+    Person4Mb,
+    Person5Mb,
     GithubLogo,
     TelegramLogo,
     Mouse
