@@ -17,7 +17,7 @@
             width: 100%;
             max-width: 100px;
             text-align: center;
-            padding: 8px 22px 9px;
+            padding: 8px 20px 9px;
             border-radius: 30px;
             border: solid 1px $colorYellow;
             text-decoration: none;
@@ -49,7 +49,12 @@
 			align-items: center;
 			.menu-left,
 			.menu-right {
-				width: 30%;
+				@media (min-width: 1020px) and (max-width: 1090px) { 
+					width: 35%;
+				}
+				@media (min-width: 1090px) { 
+					width: 30%;
+				}
 			}
 			.menu-left {
 				text-align: right;
@@ -61,6 +66,11 @@
 					width: 40%;
 					margin-top: 10%;
 					max-width: 250px;
+				}
+			}
+			.mds {
+				@media (min-width: 1020px) and (max-width: 1200px) { 
+					margin: 0 0.5rem !important;
 				}
 			}
 		}

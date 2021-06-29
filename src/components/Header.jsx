@@ -2,7 +2,7 @@
 import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
-
+import Pdf from '../assets/pdf/Hool_gameplay.pdf';
 /** App */
 import * as Images from '../assets/images/index';
 import {LINK_CONTACT_US} from '../helpers/constants';
@@ -27,24 +27,27 @@ export default function Header() {
 				</div>
 				<div className='menu-content'>
 					<div className='menu-left'>
-						<Link to='/' className={getActiveClassName('/')}>
+						<Link to='/' className={getActiveClassName('/','mr-1')}>
 							HOME
 						</Link>
-						<Link to='/whitepaper' className={getActiveClassName('/whitepaper', 'mx-2')}>
+						<Link to='/whitepaper' className={getActiveClassName('/whitepaper', 'mx-2 mds')}>
 							WHITEPAPER
 						</Link>
-						<HashLink className='header-button' smooth to='/#teams'>
+						<HashLink className='header-button ml-1' smooth to='/#teams'>
 							TEAM
 						</HashLink>
 					</div>
 					<div className='logo-container'>
 						<img src={Images.Logo} alt='logo' className='logo-image' />
 					</div>
-					<div className='menu-right'>
-						<Link to='/testnest' className={getActiveClassName('/testnest')}>
+					<div className='menu-right'>	
+						<a href={Pdf} rel='noreferrer' target='_blank' className='header-button'>
+							GAMEPLAY
+						</a>
+						<Link to='/testnest' className={getActiveClassName('/testnest', 'mx-2 mds')}>
 							TESTNEST
 						</Link>
-						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us ml-2'>
+						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us'>
 							Contact us
 						</a>
 					</div>
@@ -113,6 +116,9 @@ export default function Header() {
 						<img loading='lazy' src={Images.MenuBurger} alt='burger' className='burger-image' />
 					</button>
 					<div class='sub-menu'>
+						<a href={Pdf} rel='noreferrer' target='_blank' className='header-button'>
+							GAMEPLAY
+						</a>
 						<Link to='/testnest' className='header-button'>
 							TESTNEST
 						</Link>
