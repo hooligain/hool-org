@@ -6,6 +6,7 @@ import {
   LINK_GITHUB,
   LINK_TELEGRAM,
   TeamMembers,
+  AdvisorMembers
 } from "../helpers/constants";
 
 /** App */
@@ -199,10 +200,31 @@ const HomePage = () => {
         )}
       </div>
 
-      <div id="teams">
+      <div class="teams">
         <h1 className="title">The Team</h1>
         <div className="teams-content">
           {TeamMembers.map((member) => (
+            <div className="person">
+              {renderImage(
+                member.avatar,
+                member.avatar_mb,
+                "team",
+                "person-img"
+              )}
+
+              <p className="person-name">{member.name}</p>
+              <div className="person-description">
+			  	{member.intro.map((item)=> <p>{item}</p>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="teams">
+        <h1 className="title">Mentors &#38; Advisors</h1>
+        <div className="teams-content">
+          {AdvisorMembers.map((member) => (
             <div className="person">
               {renderImage(
                 member.avatar,
