@@ -30,8 +30,8 @@ export default function Header() {
 						<Link to='/' className={getActiveClassName('/','mr-1')}>
 							HOME
 						</Link>
-						<Link to='/whitepaper' className={getActiveClassName('/whitepaper', 'mx-2 mds')}>
-							WHITEPAPER
+						<Link to='/resources' className={getActiveClassName('/whitepaper', 'mx-2 mds')}>
+							RESOURCES
 						</Link>
 						<HashLink className='header-button ml-1' smooth to='/#teams'>
 							TEAM
@@ -104,8 +104,8 @@ export default function Header() {
 					<Link to='/' className='header-button active'>
 						HOME
 					</Link>
-					<Link to='/whitepaper' className='header-button'>
-						WHITEPAPER
+					<Link to='/resources' className='header-button'>
+						RESOURCES
 					</Link>
 					<HashLink className='header-button' smooth to='/#teams'>
 						TEAM
@@ -115,7 +115,7 @@ export default function Header() {
 					<button onClick={() => setIsMenuBurgerVisible(!isMenuBurgerVisible)}>
 						<img loading='lazy' src={Images.MenuBurger} alt='burger' className='burger-image' />
 					</button>
-					<div class='sub-menu'>
+					<div className='sub-menu'>
 						<a href={Pdf} rel='noreferrer' target='_blank' className='header-button'>
 							GAMEPLAY
 						</a>

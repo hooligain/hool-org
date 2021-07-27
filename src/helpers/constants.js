@@ -1,4 +1,6 @@
 import { Person1, Person1Mb, Person2, Person2Mb, Person3, Person3Mb, Person4, Person4Mb, Person5, Person5Mb, Person6 } from "../assets/images";
+import * as Pdf_files from "../assets/pdf/index";
+import icon from "../assets/images/pdf_icon.png";
 
 export const LINK_CONTACT_US = 'https://forms.gle/MapxURFLxcmzv7J28';
 export const LINK_GITHUB = 'https://github.com/hooligain';
@@ -37,3 +39,25 @@ export const AdvisorMembers = [{
     avatar_mb: Person6,
     intro: ['Former director at FPT Corp.','Ex-Product Manager at Kyber Network.','Founder of PolkaFoundry.']
 }]
+
+export const ListResources = [{
+    name: "Loyalty farming protocol",
+    link: Pdf_files.hool_loyalty_farming_protocol,
+    icon: icon
+  },{
+    name: "Loyalty nft protocol",
+    link: Pdf_files.hool_tokenomic,
+    icon: icon
+  }, {
+    name: "Hool whitepaper",
+    link: Pdf_files.hool_tokenomic,
+    icon: icon
+  }, {
+    name: "Hool tokenomic",
+    link: Pdf_files.hool_tokenomic,
+    icon: icon
+  }, {
+    name: "Hool gameplay",
+    link: Pdf_files.hool_gameplay,
+    icon: icon
+  }];

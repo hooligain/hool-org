@@ -29,6 +29,7 @@ import Person5 from "./person5.png";
 import Person4Mb from "./person4-mb.png";
 import Person5Mb from "./person5-mb.png";
 import Person6 from "./person6.png";
+import PolkaLogo from "./polkafoundry.png";
 
 export {
     Separation,
@@ -61,5 +62,6 @@ export {
     GithubLogo,
     TelegramLogo,
     Mouse,
-    Person6
+    Person6,
+    PolkaLogo
 };

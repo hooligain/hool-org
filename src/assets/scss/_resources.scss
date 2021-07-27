@@ -1,0 +1,32 @@
+@import "mixin";
+
+.resources {
+    h1 {
+        margin-top: 100px;        
+        @include desktop() {
+            margin-top: 150px; 
+        }
+    }
+    .list_files {  
+        text-align: start;     
+        margin-top: 40px;
+        .file_item  {  
+            margin: 12px 12px;
+            a {
+                text-decoration: none;
+                .icon {
+                    vertical-align: middle;                    
+                }
+                span {
+                    font-size: 20px;
+                    vertical-align: middle; 
+                    margin-left: 10px;
+                    color: white;
+                }
+            }
+        }
+        @include desktop() {
+            margin-left: 10%; 
+        }
+    } 
+}

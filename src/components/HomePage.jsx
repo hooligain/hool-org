@@ -53,7 +53,7 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div class="mouse d-none d-xl-flex">
+        <div className="mouse d-none d-xl-flex">
           <img src={Images.Mouse} alt="mouse" className="mouse-image" />
         </div>
       </div>
@@ -200,7 +200,7 @@ const HomePage = () => {
         )}
       </div>
 
-      <div class="teams">
+      <div className="teams">
         <h1 className="title">The Team</h1>
         <div className="teams-content">
           {TeamMembers.map((member) => (
@@ -214,14 +214,14 @@ const HomePage = () => {
 
               <p className="person-name">{member.name}</p>
               <div className="person-description">
-			  	{member.intro.map((item)=> <p>{item}</p>)}
+                {member.intro.map((item) => <p>{item}</p>)}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div class="teams">
+      <div className="teams">
         <h1 className="title">Mentors &#38; Advisors</h1>
         <div className="teams-content">
           {AdvisorMembers.map((member) => (
@@ -235,13 +235,32 @@ const HomePage = () => {
 
               <p className="person-name">{member.name}</p>
               <div className="person-description">
-			  	{member.intro.map((item)=> <p>{item}</p>)}
+                {member.intro.map((item) => <p>{item}</p>)}
               </div>
             </div>
           ))}
         </div>
       </div>
 
+      <div className="separation">
+        {renderImage(
+          Images.Separation,
+          Images.SeparationMobile,
+          "separation",
+          "separation-img"
+        )}
+      </div>
+      <div id="backed">
+        <h1 className="title">Backed by</h1>
+        <div className="backed-content">
+          {renderImage(
+            Images.PolkaLogo,
+            Images.PolkaLogo,
+            "backedby",
+            "backed-img"
+          )}
+        </div>
+      </div>
       <div id="footer">
         <div className="footer-left">
           <img src={Images.Logo} alt="logo" className="logo-image" />
