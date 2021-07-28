@@ -3,18 +3,24 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 /** App */
+import * as Images from '../assets/images/index';
 import Header from './Header';
 
-export default function ComingSoon() {
+const ComingSoon = () => {
 	return (
-		<div className='comingSoon header'>
+		<>
 			<Header />
-			<div className='comingSoon-content'>
-				<p>Coming soon</p>
-				<Link to='/'>
-					<button>Back to Home</button>
-				</Link>
+			<div className='coming-soon'>
+				<div className='coming-soon__content'>
+					<p className='coming-soon__content__title'>Coming soon</p>
+					<Link to='/' className="coming-soon__content__btn">
+						Back to home
+					</Link>
+				</div>
+				<img src={Images.ComingSoonImg} className='coming-soon__img' />
 			</div>
-		</div>
+		</>
 	);
-}
+};
+
+export default ComingSoon;
