@@ -1,16 +1,21 @@
 @import "mixin";
 
 #milestones {
-
+    margin-top:42px;
+    margin-bottom: 60px;
+    .title{
+        margin-bottom:30px;        
+    }
     .milestones-img {
         width: 90%;
         height: auto;
         text-align: center;
         padding: 0 5%; 
         @include tablet-desktop() {
-            width: 65%;
+            width: 75%;
             height: auto;
-            margin-left: 12%;
+            margin-left: 8%;
+            margin-top:44px;            
         }
     }
 }

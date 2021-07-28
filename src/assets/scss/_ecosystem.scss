@@ -1,11 +1,13 @@
 @import "mixin";
 
 #ecosystem {
+    margin-top: 37px;
     background-image: url(../images/ecosystem-bg-mb.png);
-    background-size: 190% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     h1 {
+        padding-top: 30px;
         margin: 0 20px 0px;
         font-size: 24px;
         font-weight: 500;
@@ -27,7 +29,7 @@
         }
     }
     @include desktop() {
-        background-size: 120% 100%;
+        background-size: 100% 100%;
         background-image: url(../images/ecosystem-bg.png);
     }
 }

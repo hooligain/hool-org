@@ -5,13 +5,14 @@ import {Switch, Route, BrowserRouter as Router, HashRouter} from 'react-router-d
 /** App */
 import Homepage from './components/HomePage';
 import ComingSoon from './components/ComingSoon';
+import Whitepaper from './components/Whitepaper';
 
 const App = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route path='/whitepaper'>
-					<ComingSoon />
+				<Route path='/resources'>
+					<Whitepaper />
 				</Route>
 				<Route path='/testnest'>
 					<ComingSoon />

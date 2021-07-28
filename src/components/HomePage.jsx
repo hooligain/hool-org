@@ -53,53 +53,71 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div class="mouse d-none d-xl-flex">
+        <div className="mouse d-none d-xl-flex">
           <img src={Images.Mouse} alt="mouse" className="mouse-image" />
         </div>
       </div>
-      <div className="separation">
+      {/* <div className="separation">
         {renderImage(
           Images.Separation,
           Images.SeparationMobile,
           "separation",
           "separation-img"
         )}
-      </div>
-      <div className="" id="solution">
-        <h1 className="title">Our Solution</h1>
-        <div className="solution-content">
-          <div className="single-solution">
-            <img loading="lazy" alt="solution" src={Images.Solution1} />
+      </div> */}
+      <div className="" id="gameplay">
+
+        <div className="gameplay-title">
+          <img loading="lazy" alt="solution" src={Images.GamePlay} />
+        </div>
+        <div className="gameplay-content">
+          <div className="single-gameplay">
+            {renderImage(
+              Images.GamePlay1,
+              Images.GamePlay1Mb,
+              "Fuel",
+              "gameplay-img gameplay-normal"
+            )}
+            <img loading="lazy" className="gameplay-img gameplay-hover" alt="Fuel" src={Images.Gameplay1Hover} />
             <p>
-              An NFT eco-system built by fans that incentivizes football clubs
-              and players to endorse their supporter.
+              User stake HOOL to farm Fuel, ultilized by loyalty farming protocol.
             </p>
           </div>
-          <div className="single-solution">
-            <img loading="lazy" alt="solution" src={Images.Solution2} />
+          <div className="single-gameplay">
+            {renderImage(
+              Images.GamePlay2,
+              Images.GamePlay2Mb,
+              "NFT",
+              "gameplay-img gameplay-normal"
+            )}
+            <img loading="lazy" className="gameplay-img gameplay-hover" alt="Fuel" src={Images.Gameplay2Hover} />
             <p>
-              Decentralized oracle and incentive that builds a bidirectional
-              interaction between the eco-system and real life.
+              User stake HOOl to mint NFT, which is associated with a model, created by community.
             </p>
           </div>
-          <div className="single-solution">
-            <img loading="lazy" alt="solution" src={Images.Solution3} />
+          <div className="single-gameplay">
+            {renderImage(
+              Images.GamePlay3,
+              Images.GamePlay3Mb,
+              "Play game",
+              "gameplay-img gameplay-normal"
+            )}
+            <img loading="lazy" className="gameplay-img gameplay-hover" alt="Fuel" src={Images.Gameplay3Hover} />
             <p>
-              A loyalty farming protocol that promotes the long lasting
-              contribution of users inside a pool.
+              User use NFT and FUEL to play game, grow the NFT, earn rewards and contribute to NFT model.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="separation">
+      {/* <div className="separation">
         {renderImage(
           Images.Separation,
           Images.SeparationMobile,
           "separation",
           "separation-img"
         )}
-      </div>
+      </div> */}
 
       <div className="" id="features">
         <h1>Features Overview</h1>
@@ -113,17 +131,13 @@ const HomePage = () => {
             <li className="ft-unique">
               <span className="ft-order">1</span>
               <p className="ft-unique-content">
-                <span className="ft-ct-active">
-                  Loyalty-oriented NFT framework
-                </span>
+                Stake to play game
               </p>
             </li>
             <li className="ft-unique">
               <span className="ft-order">2</span>
               <p className="ft-unique-content">
-                {" "}
-                Game economics bootstrapped by{" "}
-                <span className="ft-ct-active">loyalty farming protocol</span>
+                Decentralize match simulation
               </p>
             </li>
             <li className="ft-unique">
@@ -133,34 +147,27 @@ const HomePage = () => {
             <li className="ft-unique">
               <span className="ft-order">4</span>
               <p className="ft-unique-content">
-                <span className="ft-ct-active">Fan Token</span> and DeFi
-                Liquidity token utility
+                Play to earn
               </p>
             </li>
             <li className="ft-unique">
               <span className="ft-order">5</span>
               <p className="ft-unique-content">
-                Decentralized real-life information oracle
-              </p>
-            </li>
-            <li className="ft-unique">
-              <span className="ft-order">6</span>
-              <p className="ft-unique-content">
-                Simulator using multi-party random number generator
+                Game voting
               </p>
             </li>
           </ul>
         </div>
-        <img src={Images.LogoFtBg} alt="logo" className="logo-ft-bg" />
+        {/* <img src={Images.LogoFtBg} alt="logo" className="logo-ft-bg" /> */}
       </div>
-      <div className="separation">
+      {/* <div className="separation">
         {renderImage(
           Images.Separation,
           Images.SeparationMobile,
           "separation",
           "separation-img"
         )}
-      </div>
+      </div> */}
 
       <div className="" id="ecosystem">
         <h1>Hool Ecosystem</h1>
@@ -172,14 +179,14 @@ const HomePage = () => {
         )}
       </div>
 
-      <div className="separation-eco">
+      {/* <div className="separation-eco">
         {renderImage(
           Images.Separation,
           Images.SeparationMobile,
           "separation",
           "separation-img"
         )}
-      </div>
+      </div> */}
 
       <div className="" id="milestones">
         <h1 className="title">Milestones</h1>
@@ -191,17 +198,17 @@ const HomePage = () => {
         )}
       </div>
 
-      <div className="separation">
+      {/* <div className="separation">
         {renderImage(
           Images.Separation,
           Images.SeparationMobile,
           "separation",
           "separation-img"
         )}
-      </div>
+      </div> */}
 
-      <div class="teams">
-        <h1 className="title">The Team</h1>
+      <div className="teams">
+        <h1 className="title">Founding team</h1>
         <div className="teams-content">
           {TeamMembers.map((member) => (
             <div className="person">
@@ -214,15 +221,15 @@ const HomePage = () => {
 
               <p className="person-name">{member.name}</p>
               <div className="person-description">
-			  	{member.intro.map((item)=> <p>{item}</p>)}
+                {member.intro.map((item) => <p>{item}</p>)}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div class="teams">
-        <h1 className="title">Mentors &#38; Advisors</h1>
+      <div className="teams">
+        <h1 className="title">Advisors</h1>
         <div className="teams-content">
           {AdvisorMembers.map((member) => (
             <div className="person">
@@ -235,13 +242,32 @@ const HomePage = () => {
 
               <p className="person-name">{member.name}</p>
               <div className="person-description">
-			  	{member.intro.map((item)=> <p>{item}</p>)}
+                {member.intro.map((item) => <p>{item}</p>)}
               </div>
             </div>
           ))}
         </div>
       </div>
 
+      {/* <div className="separation">
+        {renderImage(
+          Images.Separation,
+          Images.SeparationMobile,
+          "separation",
+          "separation-img"
+        )}
+      </div> */}
+      {/* <div id="backed">
+        <h1 className="title">Backed by</h1>
+        <div className="backed-content">
+          {renderImage(
+            Images.PolkaLogo,
+            Images.PolkaLogo,
+            "backedby",
+            "backed-img"
+          )}
+        </div>
+      </div> */}
       <div id="footer">
         <div className="footer-left">
           <img src={Images.Logo} alt="logo" className="logo-image" />
