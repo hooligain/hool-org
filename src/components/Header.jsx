@@ -3,6 +3,7 @@ import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
 import Pdf from '../assets/pdf/Hool_gameplay.pdf';
+
 /** App */
 import * as Images from '../assets/images/index';
 import {LINK_CONTACT_US} from '../helpers/constants';
@@ -11,123 +12,89 @@ export default function Header() {
 	const [isMenuBurgerVisible, setIsMenuBurgerVisible] = React.useState(false);
 	const location = useLocation();
 
-	const classNameMenuBurger = isMenuBurgerVisible ? 'menu-burger open' : 'menu-burger';
+	const classNameMenuBurger = isMenuBurgerVisible ? 'header__mobile__menu-burger open' : 'header__mobile__menu-burger';
+
 	const getActiveClassName = (to, otherClasses = '') => {
-		let className = 'header-button ' + otherClasses;
+		let className = 'header__navigation__item ' + otherClasses;
 		if (location.pathname === to) {
-			className += ' active'; 
+			className += ' header__navigation__item--active';
 		}
 		return className;
-	}
+	};
 	return (
-		<>
-			<div className='menu d-none d-xl-flex'>
-				<div className='menu-background'>
-					<img src={Images.LogoBg} alt='logo-bg' className='logo-background' />
+		<div className="header">
+			{/* Navigation Desktop */}
+			<div className='header__desktop d-none d-xl-block'>
+				<div className='header__desktop__logo-container'>
+					<img src={Images.LogoHeaderDesktop} alt='logo-hool' />
 				</div>
-				<div className='menu-content'>
-					<div className='menu-left'>
-						<Link to='/' className={getActiveClassName('/','mr-1')}>
-							HOME
-						</Link>
-						<Link to='/resources' className={getActiveClassName('/whitepaper', 'mx-2 mds')}>
-							RESOURCES
-						</Link>
-						<HashLink className='header-button ml-1' smooth to='/#teams'>
-							TEAM
-						</HashLink>
-					</div>
-					<div className='logo-container'>
-						<img src={Images.Logo} alt='logo' className='logo-image' />
-					</div>
-					<div className='menu-right'>	
-						<a href={Pdf} rel='noreferrer' target='_blank' className='header-button'>
-							GAMEPLAY
-						</a>
-						<Link to='/testnest' className={getActiveClassName('/testnest', 'mx-2 mds')}>
-							TESTNEST
-						</Link>
-						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us'>
-							Contact us
-						</a>
-					</div>
 
-					{/* <li>
-						<Link to='/' className='header-button active'>
-							HOME
-						</Link>
-					</li>
-					<li>
-						<Link to='/whitepaper' className='header-button'>
-							WHITEPAPER
-						</Link>
-					</li>
-					<li>
-						<HashLink className='header-button' smooth to='/#teams'>
-							TEAM
-						</HashLink>
-					</li>
-					<li>
-						<img src={Images.Logo} alt='logo' className='logo-image' />
-					</li>
-					<li>
-						<Link to='/testnest' className='header-button'>
-							TESTNEST
-						</Link>
-					</li>
-					<li>
-						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us'>
+				<div className='header__desktop__navigation'>
+					<img
+						src={Images.BackgroundHeaderNavigation}
+						alt='navigation-background'
+						className='header__desktop__navigation__background'
+					/>
+					<div className='header__desktop__navigation__contents'>
+						<div className='header__desktop__navigation__items'>
+							<Link to='/' className={getActiveClassName('/', 'mr-1')}>
+								HOME
+							</Link>
+							<Link to='/resources' className={getActiveClassName('/resources', 'mx-1')}>
+								RESOURCES
+							</Link>
+							<HashLink className='header__navigation__item mx-1' smooth to='/#teams'>
+								TEAM
+							</HashLink>
+							<a href={Pdf} rel='noreferrer' target='_blank' className='header__navigation__item mx-1'>
+								GAMEPLAY
+							</a>
+							<Link to='/testnest' className={getActiveClassName('/testnest', 'ml-1')}>
+								TESTNEST
+							</Link>
+						</div>
+
+						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header__desktop__navigation__contact-btn'>
 							Contact us
 						</a>
-					</li>
-					<li></li> */}
+					</div>
 				</div>
-				{/* <div className='menu-content'>
-					<div className='menu-left'>
-						
-						
-						
-					</div>
-					<div className='logo'>
-						
-					</div>
-					<div className='menu-right'>
-						
-						
-					</div>
-				</div> */}
 			</div>
 
-			<div className='menu-mobile d-flex d-xl-none'>
-				<div className='menu-left d-flex'>
-					<img loading='lazy' src={Images.Logo} alt='logo' className='logo-image' />
-					<Link to='/' className='header-button active'>
+			<div className='header__mobile d-flex d-xl-none'>
+				<div className='header__mobile__items d-flex'>
+					<img loading='lazy' src={Images.Logo} alt='logo' className='header__mobile__logo' />
+					<Link to='/' className={getActiveClassName('/')}>
 						HOME
 					</Link>
-					<Link to='/resources' className='header-button'>
+					<Link to='/resources' className={getActiveClassName('/resources')}>
 						RESOURCES
 					</Link>
-					<HashLink className='header-button' smooth to='/#teams'>
+					<HashLink className='header__navigation__item' smooth to='/#teams'>
 						TEAM
 					</HashLink>
 				</div>
 				<div className={classNameMenuBurger}>
-					<button onClick={() => setIsMenuBurgerVisible(!isMenuBurgerVisible)}>
-						<img loading='lazy' src={Images.MenuBurger} alt='burger' className='burger-image' />
+					<button onClick={() => setIsMenuBurgerVisible(!isMenuBurgerVisible)}  className='header__mobile__menu-burger__icon'>
+						<img loading='lazy' src={Images.MenuBurger} alt='burger' />
 					</button>
-					<div className='sub-menu'>
-						<a href={Pdf} rel='noreferrer' target='_blank' className='header-button'>
+					<div className='header__mobile__menu-burger__items'>
+						<a href={Pdf} rel='noreferrer' target='_blank' className='header__navigation__item'>
 							GAMEPLAY
 						</a>
-						<Link to='/testnest' className='header-button'>
+						<Link to='/testnest' className={getActiveClassName('/testnest')}>
 							TESTNEST
 						</Link>
-						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header-button contact-us'>
+						<a
+							href={LINK_CONTACT_US}
+							rel='noreferrer'
+							target='_blank'
+							className='header__navigation__item header__mobile__navigation__item__contact-btn'>
 							Contact us
 						</a>
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

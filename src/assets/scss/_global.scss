@@ -18,6 +18,7 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
 .position-relative {
@@ -47,7 +48,8 @@ body {
 
 p,
 a,
-li {
+li,
+span {
 	font-size: 14px;
 	@include tablet() {
 		font-size: 16px;
