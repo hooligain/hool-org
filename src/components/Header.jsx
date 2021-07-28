@@ -7,6 +7,7 @@ import Pdf from '../assets/pdf/Hool_gameplay.pdf';
 /** App */
 import * as Images from '../assets/images/index';
 import {LINK_CONTACT_US} from '../helpers/constants';
+import {openInNewTab} from '../helpers/lib';
 
 export default function Header() {
 	const [isMenuBurgerVisible, setIsMenuBurgerVisible] = React.useState(false);
@@ -22,7 +23,7 @@ export default function Header() {
 		return className;
 	};
 	return (
-		<div className="header">
+		<div className='header'>
 			{/* Navigation Desktop */}
 			<div className='header__desktop d-none d-xl-block'>
 				<div className='header__desktop__logo-container'>
@@ -46,7 +47,7 @@ export default function Header() {
 							<HashLink className='header__navigation__item mx-1' smooth to='/#teams'>
 								TEAM
 							</HashLink>
-							<a href={Pdf} rel='noreferrer' target='_blank' className='header__navigation__item mx-1'>
+							<a onClick={() => openInNewTab(Pdf)} className='header__navigation__item mx-1'>
 								GAMEPLAY
 							</a>
 							<Link to='/testnest' className={getActiveClassName('/testnest', 'ml-1')}>
@@ -54,7 +55,7 @@ export default function Header() {
 							</Link>
 						</div>
 
-						<a href={LINK_CONTACT_US} rel='noreferrer' target='_blank' className='header__desktop__navigation__contact-btn'>
+						<a onClick={() => openInNewTab(LINK_CONTACT_US)} className='header__desktop__navigation__contact-btn'>
 							Contact us
 						</a>
 					</div>
@@ -75,20 +76,20 @@ export default function Header() {
 					</HashLink>
 				</div>
 				<div className={classNameMenuBurger}>
-					<button onClick={() => setIsMenuBurgerVisible(!isMenuBurgerVisible)}  className='header__mobile__menu-burger__icon'>
+					<button
+						onClick={() => setIsMenuBurgerVisible(!isMenuBurgerVisible)}
+						className='header__mobile__menu-burger__icon'>
 						<img loading='lazy' src={Images.MenuBurger} alt='burger' />
 					</button>
 					<div className='header__mobile__menu-burger__items'>
-						<a href={Pdf} rel='noreferrer' target='_blank' className='header__navigation__item'>
+						<a onClick={() => openInNewTab(Pdf)} className='header__navigation__item'>
 							GAMEPLAY
 						</a>
 						<Link to='/testnest' className={getActiveClassName('/testnest')}>
 							TESTNEST
 						</Link>
 						<a
-							href={LINK_CONTACT_US}
-							rel='noreferrer'
-							target='_blank'
+							onClick={() => openInNewTab(LINK_CONTACT_US)}
 							className='header__navigation__item header__mobile__navigation__item__contact-btn'>
 							Contact us
 						</a>
