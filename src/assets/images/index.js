@@ -30,6 +30,17 @@ import Person4Mb from "./person4-mb.png";
 import Person5Mb from "./person5-mb.png";
 import Person6 from "./person6.png";
 import PolkaLogo from "./polkafoundry.png";
+import GamePlay1Mb from "./game-play-1-mb.png";
+import GamePlay1 from "./game-play-1.png";
+import GamePlay2Mb from "./game-play-2-mb.png";
+import GamePlay2 from "./game-play-2.png";
+import GamePlay3Mb from "./game-play-3-mb.png";
+import GamePlay3 from "./game-play-3.png";
+import GamePlay from "./gameplay.png";
+import GameplayMb from "./gameplay-mb.png";
+import Gameplay1Hover from "./game-play-1-hover.png";
+import Gameplay2Hover from "./game-play-2-hover.png";
+import Gameplay3Hover from "./game-play-3-hover.png";
 
 export {
     Separation,
@@ -63,5 +74,16 @@ export {
     TelegramLogo,
     Mouse,
     Person6,
-    PolkaLogo
+    PolkaLogo,
+    GamePlay1,
+    GamePlay1Mb,
+    GamePlay2,
+    GamePlay2Mb,
+    GamePlay3,
+    GamePlay3Mb,
+    GamePlay,
+    GameplayMb,
+    Gameplay1Hover,
+    Gameplay2Hover,
+    Gameplay3Hover
 };
