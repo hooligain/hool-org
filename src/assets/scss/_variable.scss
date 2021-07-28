@@ -1,6 +1,7 @@
 /* ********* COLOR ********* */
 $colorWhite: #ffffff;
 $colorYellow: #fec602;
+$colorYellow1: #e7b22f;
 $colorDarkBlue: #001B2E;
 $colorDark: #03070c;
 
@@ -52,5 +53,27 @@ $axe: (x,y);
   }
   .p-#{$space} {
     padding: map-get($spacers, $space) !important;
+  }
+}
+
+$typeDisplays: (none, block, inline-block, flex);
+
+@each $display in $typeDisplays {
+  .d-#{$display} { // mobile
+    display: $display;
+  }
+}
+
+@each $display in $typeDisplays {
+  @include tablet-desktop() {
+    .d-md-#{$display} {
+      display: $display;
+    }
+  }
+  
+  @include desktop() {
+    .d-xl-#{$display} {
+      display: $display;
+    }
   }
 }

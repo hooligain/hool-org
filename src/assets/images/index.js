@@ -1,11 +1,13 @@
+import Logo from "./hool-logo.png";
+import LogoHeaderDesktop from "./hool-logo-header.png";
+import BackgroundHeaderNavigation from "./background-header-navigation.png";
+import IntroductionImg from "./introduction-img.png";
+import IntroductionContentContactBtn from "./introduction-contact-us-btn.png";
 import Separation from "./separation.png";
 import SeparationMobile from "./separation-mobile.png";
 import Solution1 from "./solution-1.png";
 import Solution2 from "./solution-2.png";
 import Solution3 from "./solution-3.png";
-import LogoClubs from "./logo-clubs.png";
-import Logo from "./hool-logo.png";
-import LogoBg from "./logo2-bg.png";
 import MenuBurger from "./menu-burger.png";
 import LogoFeature from "./logo-feature.png";
 import LogoFtBg from "./logo-ft-bg.png";
@@ -43,14 +45,16 @@ import Gameplay2Hover from "./game-play-2-hover.png";
 import Gameplay3Hover from "./game-play-3-hover.png";
 
 export {
+    Logo,
+    LogoHeaderDesktop,
+    BackgroundHeaderNavigation,
+    IntroductionImg,
+    IntroductionContentContactBtn,
     Separation,
     SeparationMobile,
     Solution1,
     Solution2,
     Solution3,
-    LogoClubs,
-    Logo,
-    LogoBg,
     MenuBurger,
     LogoFeature,
     LogoFtBg,
