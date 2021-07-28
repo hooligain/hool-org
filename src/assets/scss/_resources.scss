@@ -1,30 +1,36 @@
 .resources {
-    h1 {
-        margin-top: 100px;        
+    background-color: #03070c;
+    margin-top: 100px;
+    padding: 0 20px;
+    .resources__item {
+        width: 250px;
+        height: 62px;
+        background-image: url('../images/background-file-btn.png');
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 0 auto 25px;
+        padding-left: 20px;
+
         @include desktop() {
-            margin-top: 150px; 
+            width: 350px;
+            padding-left: 40px;
         }
-    }
-    .list_files {  
-        text-align: start;     
-        margin-top: 40px;
-        .file_item  {  
-            margin: 12px 12px;
-            a {
-                text-decoration: none;
-                .icon {
-                    vertical-align: middle;                    
-                }
-                span {
-                    font-size: 20px;
-                    vertical-align: middle; 
-                    margin-left: 10px;
-                    color: white;
-                }
+        
+        .resources__item__name {
+            font-size: 18px;
+            color: $colorWhite;
+            padding-left: 5px;
+            @include desktop() {
+                font-size: 24px;
             }
         }
-        @include desktop() {
-            margin-left: 10%; 
-        }
-    } 
+    }
+
+    @include desktop() {
+        margin-top: 200px;
+        padding: 0;
+    }
 }
