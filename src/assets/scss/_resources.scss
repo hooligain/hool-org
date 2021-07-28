@@ -1,30 +1,22 @@
 .resources {
-    h1 {
-        margin-top: 100px;        
-        @include desktop() {
-            margin-top: 150px; 
+    background-color: #03070c;
+    margin-top: 100px;
+    .resources__item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        width: 350px;
+        margin: 20px auto;
+        
+        .resources__item__name {
+            font-size: 24px;
+            color: $colorWhite;
+            padding-left: 5px;
         }
     }
-    .list_files {  
-        text-align: start;     
-        margin-top: 40px;
-        .file_item  {  
-            margin: 12px 12px;
-            a {
-                text-decoration: none;
-                .icon {
-                    vertical-align: middle;                    
-                }
-                span {
-                    font-size: 20px;
-                    vertical-align: middle; 
-                    margin-left: 10px;
-                    color: white;
-                }
-            }
-        }
-        @include desktop() {
-            margin-left: 10%; 
-        }
-    } 
+
+    @include desktop() {
+        margin-top: 200px;
+    }
 }
