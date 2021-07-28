@@ -46,11 +46,11 @@ export const ListResources = [{
     icon: icon
   },{
     name: "Loyalty nft protocol",
-    link: Pdf_files.hool_tokenomic,
+    link: Pdf_files.hool_loyalty_nft_protocol,
     icon: icon
   }, {
     name: "Hool whitepaper",
-    link: Pdf_files.hool_tokenomic,
+    link: 'https://docs.google.com/document/d/1CIP-rqr7UNo48pWntAjDHU9VVCQUp9C3yyKDJl0iOyw/edit?usp=sharing',
     icon: icon
   }, {
     name: "Hool tokenomic",
