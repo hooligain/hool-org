@@ -1,6 +1,10 @@
+// React
 import React from 'react';
+
+// App
 import Header from './Header';
 import {ListResources} from '../helpers/constants';
+import {openInNewTab} from '../helpers/lib';
 
 const Whitepaper = () => {
 	return (
@@ -8,7 +12,7 @@ const Whitepaper = () => {
 			<Header />
 			<div className='resources'>
 				{ListResources.map((resource, index) => (
-					<a key={index} className='resources__item' href={resource.link} rel='noreferrer' target='_blank'>
+					<a key={index} className='resources__item' onClick={() => openInNewTab(resource.link)}>
 						<img className='icon' src={resource.icon} alt='pdf file' />
 						<span className='resources__item__name'>{resource.name}</span>
 					</a>
