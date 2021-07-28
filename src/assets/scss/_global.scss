@@ -1,5 +1,5 @@
-@import 'variable';
-@import 'mixin';
+@import "mixin";
+@import "variable";
 
 @font-face {
 	font-family: 'Koho';
@@ -18,31 +18,6 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-}
-
-.d-none {
-	display: none;
-}
-.d-flex {
-	display: flex;
-}
-
-@include tablet-desktop() {
-	.d-md-none {
-		display: none;
-	}
-	.d-md-flex {
-		display: flex;
-	}
-}
-
-@include desktop() {
-	.d-xl-none {
-		display: none;
-	}
-	.d-xl-flex {
-		display: flex;
-	}
 }
 
 .position-relative {
