@@ -47,7 +47,7 @@ const HomePage = () => (
 						<p>User stake HOOL to farm Fuel, ultilized by loyalty farming protocol.</p>
 					</div>
 					<div className='single-gameplay'>
-						{renderImage(Images.GamePlay2, Images.GamePlay2Mb, 'NFT', 'gameplay-img gameplay-normal')}
+						{renderImage(Images.GamePlay2, Images.GamePlay2, 'NFT', 'gameplay-img gameplay-normal')}
 						<img loading='lazy' className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay2Hover} />
 						<p>User stake HOOl to mint NFT, which is associated with a model, created by community.</p>
 					</div>
@@ -102,17 +102,17 @@ const HomePage = () => (
 			</div>
 
 			{/* Founding Team */}
-			<div className='teams'>
+			<div className='teams' id='teams'>
 				<h1 className='title'>Founding team</h1>
 				<div className='teams-content'>
-					{TeamMembers.map(member => (
-						<div className='person'>
+					{TeamMembers.map((member, index) => (
+						<div key={member + index} className='person'>
 							{renderImage(member.avatar, member.avatar_mb, 'team', 'person-img')}
 
 							<p className='person-name'>{member.name}</p>
 							<div className='person-description'>
-								{member.intro.map(item => (
-									<p>{item}</p>
+								{member.intro.map((item, index) => (
+									<p key={index}>{item}</p>
 								))}
 							</div>
 						</div>
@@ -124,14 +124,14 @@ const HomePage = () => (
 			<div className='teams'>
 				<h1 className='title'>Advisors</h1>
 				<div className='teams-content'>
-					{AdvisorMembers.map(member => (
-						<div className='person'>
+					{AdvisorMembers.map((member, index) => (
+						<div key={member + index} className='person'>
 							{renderImage(member.avatar, member.avatar_mb, 'team', 'person-img')}
 
 							<p className='person-name'>{member.name}</p>
 							<div className='person-description'>
-								{member.intro.map(item => (
-									<p>{item}</p>
+								{member.intro.map((item, index) => (
+									<p key={index}>{item}</p>
 								))}
 							</div>
 						</div>
