@@ -48,7 +48,7 @@ const HomePage = () => {
 					</div>
 				</div>
 
-        {/* Gameplay */}
+				{/* Gameplay */}
 				<div id='gameplay'>
 					<div className='gameplay-title'>
 						<img loading='lazy' alt='solution' src={Images.GamePlay} />
@@ -72,7 +72,7 @@ const HomePage = () => {
 					</div>
 				</div>
 
-        {/* Features */}
+				{/* Features */}
 				<div id='features'>
 					<h1>Features Overview</h1>
 					<div className='ft-section'>
@@ -102,30 +102,30 @@ const HomePage = () => {
 					</div>
 				</div>
 
-        {/* Ecosystem */}
+				{/* Ecosystem */}
 				<div id='ecosystem'>
 					<h1>Hool Ecosystem</h1>
 					{renderImage(Images.Ecosystem, Images.EcosystemMobile, 'ecosystem', 'ecosystem-img')}
 				</div>
 
-        {/* Milestones */}
+				{/* Milestones */}
 				<div id='milestones'>
 					<h1 className='title'>Milestones</h1>
 					{renderImage(Images.Milestones, Images.MilestonesMb, 'Milestones', 'milestones-img')}
 				</div>
 
-        {/* Founding Team */}
-				<div className='teams'>
+				{/* Founding Team */}
+				<div className='teams' id='teams'>
 					<h1 className='title'>Founding team</h1>
 					<div className='teams-content'>
-						{TeamMembers.map(member => (
-							<div className='person'>
+						{TeamMembers.map((member, index) => (
+							<div key={member.name + index} className='person'>
 								{renderImage(member.avatar, member.avatar_mb, 'team', 'person-img')}
 
 								<p className='person-name'>{member.name}</p>
 								<div className='person-description'>
-									{member.intro.map(item => (
-										<p>{item}</p>
+									{member.intro.map((item, index) => (
+										<p key={index}>{item}</p>
 									))}
 								</div>
 							</div>
@@ -133,18 +133,18 @@ const HomePage = () => {
 					</div>
 				</div>
 
-        {/* Advisors */}
+				{/* Advisors */}
 				<div className='teams'>
 					<h1 className='title'>Advisors</h1>
 					<div className='teams-content'>
-						{AdvisorMembers.map(member => (
-							<div className='person'>
+						{AdvisorMembers.map((member, index) => (
+							<div key={member.name + index} className='person'>
 								{renderImage(member.avatar, member.avatar_mb, 'team', 'person-img')}
 
 								<p className='person-name'>{member.name}</p>
 								<div className='person-description'>
-									{member.intro.map(item => (
-										<p>{item}</p>
+									{member.intro.map((item, index) => (
+										<p key={index}>{item}</p>
 									))}
 								</div>
 							</div>
@@ -152,7 +152,7 @@ const HomePage = () => {
 					</div>
 				</div>
 
-        {/* Footer */}
+				{/* Footer */}
 				<div id='footer'>
 					<div className='footer-left'>
 						<img src={Images.Logo} alt='logo' className='logo-image' />

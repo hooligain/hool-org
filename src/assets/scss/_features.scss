@@ -20,8 +20,9 @@
         }
         .ft-content {
             list-style-type: none;
-            width: 85%;
-            margin-left: 7%;
+            width: 70%;
+            margin: auto;
+            padding: 0;
             .ft-unique {
                 display: flex;
                 flex-direction: row;
@@ -55,7 +56,8 @@
             @include tablet-desktop() {
                 width: 45%;
                 align-self: flex-start;
-                margin-left: 0%;
+                margin: 0;
+                padding-left: 62px;
             }
             @include desktop() {
                 width: 50%;
