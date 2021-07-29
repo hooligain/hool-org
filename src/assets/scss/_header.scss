@@ -1,83 +1,90 @@
-@import 'variable';
-@import 'mixin';
-
 .header {
-	width: 100%;
-	position: relative;
-
-	.header-button {
+	.header__navigation__item {
 		text-decoration: none;
 		color: $colorWhite;
 		font-weight: 600;
-		&.active,
+		cursor: pointer;
+		&.header__navigation__item--active,
 		&:hover {
 			color: $colorYellow;
+			text-shadow: 0 1px 13px $colorYellow1;
 		}
-        &.contact-us {
-            width: 100%;
-            max-width: 100px;
-            text-align: center;
-            padding: 8px 20px 9px;
-            border-radius: 30px;
-            border: solid 1px $colorYellow;
-            text-decoration: none;
-            color: $colorYellow;
-            font-weight: 600;
-        }
+		@include desktop() {
+			font-size: 16px;
+		}
 	}
-
-	.menu {
-		.menu-background {
-			opacity: 0.5;
-			width: 100%;
+	
+	.header__desktop {
+		.header__desktop__logo-container {
 			position: absolute;
-			height: 60px;
-			z-index: 0;
-			text-align: center;
-			background-color: #001e31;
-			.logo-background {
-				width: 40%;
-				max-width: 600px;
+			z-index: 10;
+			top: 25px;
+			left: 35px;
+			> img {
+				width: 175px;
+				height: auto;
 			}
 		}
-
-		.menu-content {
-			position: relative;
-			width: 100%;
-			height: 60px;
-			display: flex;
-			align-items: center;
-			.menu-left,
-			.menu-right {
-				@media (min-width: 1020px) and (max-width: 1090px) { 
-					width: 35%;
-				}
-				@media (min-width: 1090px) { 
-					width: 30%;
-				}
+		.header__desktop__navigation {
+			position: absolute;
+			z-index: 5;
+			top: 35px;
+			left: 80px;
+			right: 35px;
+			.header__desktop__navigation__background {
+				width: 100%;
+				height: 82px;
+				position: absolute;
+				z-index: -1;
 			}
-			.menu-left {
-				text-align: right;
-			}
-			.logo-container {
-				width: 40%;
-				text-align: center;
-				img {
-					width: 40%;
-					margin-top: 10%;
-					max-width: 250px;
+			.header__desktop__navigation__contents {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				height: 86px;
+				.header__desktop__navigation__items {
+					margin-left: 165px;
+					.header__navigation__item {
+						&.header__navigation__item--active,
+						&:hover {
+							position: relative;
+							&::after {
+								position: absolute;
+								content: '';
+								left: 0;
+								bottom: -29px;
+								width: 100%;
+								height: 3px;
+								border-radius: 2px;
+								box-shadow: 0 0 4px 0 #3eb9ff;
+								background-color: #2eb3ff;
+							}
+						}
+					}
 				}
-			}
-			.mds {
-				@media (min-width: 1020px) and (max-width: 1200px) { 
-					margin: 0 0.5rem !important;
+				.header__desktop__navigation__contact-btn {
+					width: 146px;
+					height: 42px;
+					background: url('../images/background-btn.png');
+					background-size: 100% 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-right: 25px;
+					font-size: 14px;
+					font-weight: 600;
+					color: $colorYellow;
+					text-transform: uppercase;
+					text-decoration: none;
+					cursor: pointer;
 				}
 			}
 		}
 	}
-
-	.menu-mobile {
-		background-color: rgba(0, 30, 49, 0.6);
+	
+	.header__mobile {
+		background-color: rgba(2, 61, 101, 0.6);
 		margin: 0 0 9px;
 		padding: 0 15px;
 		height: 60px;
@@ -87,17 +94,17 @@
 		top: 0;
 		left: 0;
 		right: 0;
-
-		.menu-left {
+	
+		.header__mobile__items {
 			display: flex;
 			align-items: center;
-			.logo-image {
+			.header__mobile__logo {
 				width: 55px;
 				height: auto;
 				position: relative;
 				top: -4px;
 			}
-			a {
+			.header__navigation__item {
 				font-weight: 600;
 				padding: 0 8px;
 				&:nth-child(2) {
@@ -105,12 +112,13 @@
 				}
 			}
 		}
-		.menu-burger {
-			button {
+		.header__mobile__menu-burger {
+			.header__mobile__menu-burger__icon {
 				background: transparent;
 				border: 0;
+				cursor: pointer;
 			}
-			.sub-menu {
+			.header__mobile__menu-burger__items {
 				display: none;
 				flex-direction: column;
 				align-items: center;
@@ -123,114 +131,31 @@
 				-moz-transition: all 0.5s ease;
 			}
 			&.open {
-				.sub-menu {
+				.header__mobile__menu-burger__items {
 					display: flex;
 					-webkit-font-smoothing: antialiased;
 					/* to stop flickering of text in safari */
-
+	
 					transform: translate(0, 60px);
-					background: rgba(0, 30, 49, 0.6);
+					background-color: rgba(2, 61, 101, 0.6);
 					a {
 						margin: 10px 0;
 						font-weight: 600;
 					}
 				}
-			}
-		}
-	}
-
-	.introduction {
-		display: flex;
-		flex-direction: column;
-		.introduction-img {
-			background-image: url('../images/background-header.png');
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
-			text-align: center;
-			> img {
-				width: 60%;
-				height: auto;
-				margin: 0 0 26px;
-				margin-top: 90px;
-                max-width: 400px;
-				@include desktop() {
-					margin-top: 9px;
+				.header__mobile__navigation__item__contact-btn {
+					width: 100%;
+					max-width: 100px;
+					text-align: center;
+					padding: 8px 20px 9px;
+					border-radius: 30px;
+					border: solid 1px $colorYellow;
+					text-decoration: none;
+					color: $colorYellow;
+					font-weight: 600;
+					margin: 10px 0;
 				}
 			}
-			@include desktop() {
-				width: 50%;
-				background: none;
-			}
 		}
-		.introduction-content {
-			text-align: center;
-			padding: 15px;
-			h1 {
-				font-size: 32px;
-				font-weight: 500;
-				margin: 0;
-				@include desktop() {
-					font-size: 54px;
-					font-weight: 500;
-				}
-			}
-			p.slogan {
-				font-size: 18px;
-				font-weight: 500;
-				@include desktop() {
-					margin: 9px 0;
-					margin-left: -10px;
-					padding: 10px 27px 13px 23px;
-					display: inline-block;
-					font-size: 24px;
-					border-radius: 16px;
-					background-color: rgba(6, 32, 59, 0.8);
-				}
-			}
-			.description {
-				margin: 17px 0 28px;
-				@include desktop() {
-					max-width: 469px;
-				}
-			}
-			.contact-us {
-				width: 96%;
-				padding: 15px 55px 15px 52px;
-				border: 0;
-				border-radius: 30px;
-				background-color: #fec602;
-				font-size: 16px;
-				font-weight: 600;
-				max-width: 320px;
-
-				@include desktop() {
-					width: 210px;
-					font-size: 18px;
-				}
-			}
-			@include desktop() {
-				width: 50%;
-				margin-left: 11%;
-				padding: 0;
-				text-align: left;
-			}
-		}
-		@include desktop() {
-			flex-direction: row-reverse;
-			align-items: center;
-			margin-top: 90px;
-		}
-	}
-
-	.mouse {
-		justify-content: center;
-		.mouse-image {
-			width: 50px;
-		}
-	}
-	@include desktop() {
-		background-image: url('../images/background-header.png');
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
 	}
 }
