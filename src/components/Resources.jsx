@@ -12,10 +12,10 @@ const Whitepaper = () => {
 			<Header />
 			<div className='resources'>
 				{ListResources.map((resource, index) => (
-					<a key={index} className='resources__item' onClick={() => openInNewTab(resource.link)}>
+					<button key={index} className='resources__item' onClick={() => openInNewTab(resource.link)}>
 						<img className='icon' src={resource.icon} alt='pdf file' />
 						<span className='resources__item__name'>{resource.name}</span>
-					</a>
+					</button>
 				))}
 			</div>
 		</>

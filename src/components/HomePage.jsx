@@ -22,13 +22,13 @@ const HomePage = () => (
 						Hool’s mission is to give fans the power to approach their football clubs, bring fans and clubs closer
 						together
 					</p>
-					<a
+					<button
 						onClick={() => {
 							openInNewTab(LINK_CONTACT_US);
 						}}
 						className='introduction__content__contact-btn'>
-						<img src={Images.IntroductionContentContactBtn} />
-					</a>
+						<img src={Images.IntroductionContentContactBtn} alt="Introduction Contact Button" />
+					</button>
 				</div>
 				<div className='mouse d-none d-xl-flex'>
 					<img src={Images.Mouse} alt='mouse' className='mouse-image' />
