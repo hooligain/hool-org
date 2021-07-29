@@ -66,7 +66,7 @@
 				.header__desktop__navigation__contact-btn {
 					width: 146px;
 					height: 42px;
-					background-image: url('../images/background-btn.png');
+					background: url('../images/background-btn.png');
 					background-size: 100% 100%;
 					display: flex;
 					align-items: center;
@@ -153,6 +153,7 @@
 					text-decoration: none;
 					color: $colorYellow;
 					font-weight: 600;
+					margin: 10px 0;
 				}
 			}
 		}

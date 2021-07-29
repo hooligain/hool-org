@@ -47,7 +47,7 @@ export default function Header() {
 							<HashLink className='header__navigation__item mx-1' smooth to='/#teams'>
 								TEAM
 							</HashLink>
-							<a onClick={() => openInNewTab(Pdf)} className='header__navigation__item mx-1'>
+							<a href={Pdf} rel='noreferrer' target='_blank' className='header__navigation__item mx-1'>
 								GAMEPLAY
 							</a>
 							<Link to='/testnest' className={getActiveClassName('/testnest', 'ml-1')}>
@@ -55,9 +55,9 @@ export default function Header() {
 							</Link>
 						</div>
 
-						<a onClick={() => openInNewTab(LINK_CONTACT_US)} className='header__desktop__navigation__contact-btn'>
+						<button onClick={() => openInNewTab(LINK_CONTACT_US)} className='header__desktop__navigation__contact-btn'>
 							Contact us
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -82,17 +82,17 @@ export default function Header() {
 						<img loading='lazy' src={Images.MenuBurger} alt='burger' />
 					</button>
 					<div className='header__mobile__menu-burger__items'>
-						<a onClick={() => openInNewTab(Pdf)} className='header__navigation__item'>
+						<a href={Pdf} rel='noreferrer' target='_blank' className='header__navigation__item'>
 							GAMEPLAY
 						</a>
 						<Link to='/testnest' className={getActiveClassName('/testnest')}>
 							TESTNEST
 						</Link>
-						<a
+						<button
 							onClick={() => openInNewTab(LINK_CONTACT_US)}
 							className='header__navigation__item header__mobile__navigation__item__contact-btn'>
 							Contact us
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
