@@ -14,8 +14,8 @@
 			max-width: 150px;
 		}
 		@include desktop() {
-			margin: 0 40px;
-			max-width: 400px;
+			margin: 0 80px 0 40px;
+			max-width: 320px;
 		}
 	}
 	.coming-soon__content {
