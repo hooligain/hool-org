@@ -48,11 +48,11 @@
 		max-width: 280px;
 		padding: 0 20px;
 		img {
-			max-width: 170px;
+			max-width: 152px;
 			width: 100%;
 			height: auto;
 			@include desktop() {
-				max-width: 210px;
+				max-width: 192px;
 			}
 		}
 		p {
@@ -64,11 +64,40 @@
 			display: none;
 		}
 		&:hover {
+			img {
+				max-width: 210px;
+				margin-top: -36px;
+				@include desktop(){
+					max-width: 270.5px;
+					margin-top: -48px;
+				}
+			}
+			p {
+				margin-top: 5.5px;
+				@include desktop() {
+					margin-top: -5px;
+				}
+			}
 			.gameplay-normal{
 				display: none;
 			}
 			.gameplay-hover{
 				display: block;
+			}
+		}
+		&:nth-child(2):hover {
+			margin-bottom: 0.2px;
+			p {
+				margin-top: 4.5px;
+				@include desktop() {
+					margin-top: -6px;
+				}
+			}
+		}
+		&:last-child p {
+			margin-bottom: 0;
+			@include desktop() {
+				margin-bottom: 60px;
 			}
 		}
 	}

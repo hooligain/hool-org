@@ -47,7 +47,7 @@ const HomePage = () => (
 						<p>User stake HOOL to farm Fuel, ultilized by loyalty farming protocol.</p>
 					</div>
 					<div className='single-gameplay'>
-						{renderImage(Images.GamePlay2, Images.GamePlay2, 'NFT', 'gameplay-img gameplay-normal')}
+						{renderImage(Images.GamePlay2, Images.GamePlay2Mb, 'NFT', 'gameplay-img gameplay-normal')}
 						<img loading='lazy' className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay2Hover} />
 						<p>User stake HOOl to mint NFT, which is associated with a model, created by community.</p>
 					</div>
