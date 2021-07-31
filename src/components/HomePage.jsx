@@ -43,17 +43,17 @@ const HomePage = () => (
 				<div className='gameplay-content'>
 					<div className='single-gameplay'>
 						{renderImage(Images.GamePlay1, Images.GamePlay1Mb, 'Fuel', 'gameplay-img gameplay-normal')}
-						<img loading='lazy' className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay1Hover} />
+						<img className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay1Hover} />
 						<p>User stake HOOL to farm FUEL, ultilized by loyalty farming protocol.</p>
 					</div>
 					<div className='single-gameplay'>
 						{renderImage(Images.GamePlay2, Images.GamePlay2Mb, 'NFT', 'gameplay-img gameplay-normal')}
-						<img loading='lazy' className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay2Hover} />
+						<img className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay2Hover} />
 						<p>User stake HOOL to mint NFT, which is associated with a model, created by community.</p>
 					</div>
 					<div className='single-gameplay'>
 						{renderImage(Images.GamePlay3, Images.GamePlay3Mb, 'Play game', 'gameplay-img gameplay-normal')}
-						<img loading='lazy' className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay3Hover} />
+						<img className='gameplay-img gameplay-hover' alt='Fuel' src={Images.Gameplay3Hover} />
 						<p>User use NFT and FUEL to play game, grow the NFT, earn rewards and contribute to NFT model.</p>
 					</div>
 				</div>
