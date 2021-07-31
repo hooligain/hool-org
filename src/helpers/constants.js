@@ -41,27 +41,27 @@ export const AdvisorMembers = [{
 }]
 
 export const ListResources = [{
+    name: "Hool whitepaper",
+    link: 'https://docs.google.com/document/d/1CIP-rqr7UNo48pWntAjDHU9VVCQUp9C3yyKDJl0iOyw/edit?usp=sharing',
+    icon: icon
+  },{
+    name: "Hool tokenomic",
+    link: Pdf_files.hool_tokenomic,
+    icon: icon
+  },{
+    name: "Hool gameplay",
+    link: Pdf_files.hool_gameplay,
+    icon: icon
+  },{
+    name: "Hool pitch deck",
+    link: Pdf_files.hool_pitch_deck,
+    icon: icon
+  },{
     name: "Loyalty farming protocol",
     link: Pdf_files.hool_loyalty_farming_protocol,
     icon: icon
   },{
     name: "Loyalty nft protocol",
     link: Pdf_files.hool_loyalty_nft_protocol,
-    icon: icon
-  }, {
-    name: "Hool whitepaper",
-    link: 'https://docs.google.com/document/d/1CIP-rqr7UNo48pWntAjDHU9VVCQUp9C3yyKDJl0iOyw/edit?usp=sharing',
-    icon: icon
-  }, {
-    name: "Hool tokenomic",
-    link: Pdf_files.hool_tokenomic,
-    icon: icon
-  }, {
-    name: "Hool gameplay",
-    link: Pdf_files.hool_gameplay,
-    icon: icon
-  }, {
-    name: "Hool pitch deck",
-    link: Pdf_files.hool_pitch_deck,
     icon: icon
   }];
