@@ -60,4 +60,8 @@ export const ListResources = [{
     name: "Hool gameplay",
     link: Pdf_files.hool_gameplay,
     icon: icon
+  }, {
+    name: "Hool pitch deck",
+    link: Pdf_files.hool_pitch_deck,
+    icon: icon
   }];
