@@ -51,7 +51,7 @@ export default function Header() {
 								GAMEPLAY
 							</a>
 							<Link to='/testnest' className={getActiveClassName('/testnest', 'ml-1')}>
-								TESTNEST
+								TESTNET
 							</Link>
 						</div>
 
@@ -86,7 +86,7 @@ export default function Header() {
 							GAMEPLAY
 						</a>
 						<Link to='/testnest' className={getActiveClassName('/testnest')}>
-							TESTNEST
+							TESTNET
 						</Link>
 						<button
 							onClick={() => openInNewTab(LINK_CONTACT_US)}

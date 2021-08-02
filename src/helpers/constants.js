@@ -42,10 +42,10 @@ export const AdvisorMembers = [{
 
 export const ListResources = [{
     name: "Hool whitepaper",
-    link: 'https://docs.google.com/document/d/1CIP-rqr7UNo48pWntAjDHU9VVCQUp9C3yyKDJl0iOyw/edit?usp=sharing',
+    link: Pdf_files.hool_whitepaper,
     icon: icon
   },{
-    name: "Hool tokenomic",
+    name: "Hool tokenomics",
     link: Pdf_files.hool_tokenomic,
     icon: icon
   },{
