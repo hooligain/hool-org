@@ -1,5 +1,5 @@
 import { Person1, Person1Mb, Person2, Person2Mb, Person3, Person3Mb, Person4, Person4Mb, Person5, Person5Mb, Person6 } from "../assets/images";
-import * as Pdf_files from "../assets/pdf/index";
+// import * as Pdf_files from "../assets/pdf/index";
 import icon from "../assets/images/pdf_icon.png";
 
 export const LINK_CONTACT_US = 'https://forms.gle/MapxURFLxcmzv7J28';
@@ -42,26 +42,26 @@ export const AdvisorMembers = [{
 
 export const ListResources = [{
     name: "Hool whitepaper",
-    link: Pdf_files.hool_whitepaper,
+    link: "/hool-resources/hool_whitepaper.pdf",//Pdf_files.hool_whitepaper,
     icon: icon
   },{
     name: "Hool tokenomics",
-    link: Pdf_files.hool_tokenomic,
+    link: "/hool-resources/hool_tokenomics.pdf",//Pdf_files.hool_tokenomic,
     icon: icon
   },{
     name: "Hool gameplay",
-    link: Pdf_files.hool_gameplay,
+    link: "/hool-resources/hool_gameplay.pdf",//Pdf_files.hool_gameplay,
     icon: icon
   },{
     name: "Hool pitch deck",
-    link: Pdf_files.hool_pitch_deck,
+    link: "/hool-resources/hoolpitchdeck.pdf",//Pdf_files.hool_pitch_deck,
     icon: icon
   },{
     name: "Loyalty farming protocol",
-    link: Pdf_files.hool_loyalty_farming_protocol,
+    link: "/hool-resources/hool_loyalty_farming_protocol.pdf",//Pdf_files.hool_loyalty_farming_protocol,
     icon: icon
   },{
     name: "Loyalty nft protocol",
-    link: Pdf_files.hool_loyalty_nft_protocol,
+    link: "/hool-resources/hool_loyalty_nft_protocol.pdf",// Pdf_files.hool_loyalty_nft_protocol,
     icon: icon
   }];

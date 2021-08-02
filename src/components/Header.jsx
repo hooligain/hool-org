@@ -2,7 +2,7 @@
 import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
-import Pdf from '../assets/pdf/Hool_gameplay.pdf';
+import Pdf from '../assets/pdf/hool_gameplay.pdf';
 
 /** App */
 import * as Images from '../assets/images/index';
